@@ -52,19 +52,3 @@ class Task {
         'category_name': categoryName
       };
 }
-
-Task mytask = Task(
-  id: '1',
-  userId: '1',
-  categoryId: '1',
-  title: 'Task 1',
-  description: 'Description 1',
-  dueDate: '2023-08-10',
-  priority: 'High',
-  status: 'Pending',
-  createdAt: '2023-08-01',
-  updatedAt: '2023-08-01',
-  categoryName: 'Category 1',
-);
-
-List<Task> tasks = [mytask, mytask, mytask];

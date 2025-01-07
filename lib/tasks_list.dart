@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:mobile/task_model.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
 class TasksList extends StatefulWidget {
@@ -59,9 +58,8 @@ class _TasksListState extends State<TasksList> {
       isLoading = true;
     });
 
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-
     FlutterSecureStorage secureStorage = const FlutterSecureStorage();
+
     final url = Uri.parse('https://dev.farabicoders.com/tasks');
     final token = await secureStorage.read(key: 'token');
 
